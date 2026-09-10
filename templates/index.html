@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="chat-header">
+            💬 Greeting Chatbot
+            <p>Greetings & Simple Conversation</p>
+        </div>
+
+        <div id="chat-box" class="chat-box">
+            <div class="bot-message">
+                Hello! 👋 How are you?
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="message"
+                placeholder="Type your message..."
+                onkeypress="handleKeyPress(event)"
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
